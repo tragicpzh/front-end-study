@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="80f68868-5f0b-4871-b384-b7faa493b512" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/HTML语义.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bootstrap.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css复习.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css框模型.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html复习.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js复习.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue3.0响应式原理框架.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/初始阶段学习/第一天.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/初始阶段学习/第七天.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/初始阶段学习/第三天.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/初始阶段学习/第九天.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/初始阶段学习/第二天.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/初始阶段学习/第五天.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/初始阶段学习/第八天.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/初始阶段学习/第六天.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/初始阶段学习/第十一天.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/初始阶段学习/第十天.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/初始阶段学习/第四天.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/计算机基础.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/面试的总结.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/项目总结.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GithubDefaultAccount">
+    <option name="defaultAccountId" value="1c29002a-911b-4299-a7f8-6e3ee594bcbb" />
+  </component>
+  <component name="ProjectId" id="1hTvJL7Lu5S2wuikKBQ58SioSPR" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\workspace\front-end-study" />
+      <recent name="D:\workspace\front-end-study\初始阶段学习" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="80f68868-5f0b-4871-b384-b7faa493b512" name="Default Changelist" comment="" />
+      <created>1600047823480</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1600047823480</updated>
+      <workItem from="1600047824558" duration="1769000" />
+      <workItem from="1600224095988" duration="1622000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="2660" y="275" key="FileChooserDialogImpl" timestamp="1600048731163">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2660" y="275" key="FileChooserDialogImpl/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1600048731163" />
+    <state x="2733" y="417" width="293" height="280" key="Github.ShareDialog" timestamp="1600048690087">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2733" y="417" width="293" height="280" key="Github.ShareDialog/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1600048690087" />
+    <state x="2715" y="224" key="Github.UntrackedFilesDialog" timestamp="1600048708526">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2715" y="224" key="Github.UntrackedFilesDialog/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1600048708526" />
+    <state x="2381" y="164" key="SettingsEditor" timestamp="1600048679714">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2381" y="164" key="SettingsEditor/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1600048679714" />
+  </component>
+</project>

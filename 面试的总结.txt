@@ -1,0 +1,104 @@
+北大信研院一面（拿到offer）：
+1.算法考查
+2.js基础：promise,null,undefined
+滴滴出行电话面试（挂了）：
+1.个人介绍
+2.项目的细节：遇到的难题、解决方法、完成的工作
+3.vue基础：vue3.0的新特性（编写函数），vue和react的差别,vue和jquery(虚拟dom)，vuex的具体细节,vue的生命周期，vue的监听，compute和watch
+vue双向绑定的原理
+4.js基础：es6（await async）
+5.从url到渲染页面发生了什么，浏览器是如何渲染页面的
+青塔一面（挂了）：
+1.个人介绍
+2.项目经历、项目细节
+3.为什么选择前端
+4.之后的深造方向
+5.vue相关：vue的双向绑定
+6.反问环节（公司规模50+人，前端3、4人）
+邦盛科技一面
+1.个人介绍
+2.css: 1.中央垂直布局 2.样式的优先级 3.透明度 4.position属性详解 5.样式的预处理：less sass
+3.js:1.数组的去重 2.对象属性的遍历 3.数组的遍历方法 4.['1',2','3'].map(parseInt()) (返回[1,NAN,NAN])
+      5.async/await 6.解构赋值 7.cookie,web storage
+4.vue:1.响应式原理 2.虚拟DOM原理 3.diff算法
+5.webpack
+拼多多笔试：
+1.defer async
+2.CORS
+3.less sass
+估计过不了笔试
+暄暄科技笔试（挂了）：
+1.页面元素滚动的原理，简单地实现页面懒加载
+2.数组相关、字符串相关
+3.项目相关
+知衣科技
+1.html相关：重绘和回流、响应式布局、瀑布流、flex、块状元素的水平居中垂直
+2.js相关：防抖、map和foreach、promise的状态及相关方法
+3.vue相关：vue和原生DOM的区别、vue的双向数据绑定、v-if和v-show、vue的生命周期函数、vue的DOM挂载
+4.项目相关：遇到什么难题、为什么想从事前端
+火树科技（拿到offer）
+1.不会写的题：vue的状态管理、判断数组的方法、css相关
+2.项目相关
+有赞一面
+1.计算机网络：网络模型，tcp和udp的区别，tcp如何进行可靠传输，tcp的三次握手四次挥手
+2.js：闭包，块状作用域，es6相关
+3.html：虚拟dom和原生dom，浏览器输入url到渲染完整个页面，vue在什么时候创建
+4.框架: vue3.0新特性，vue和react的共同点
+腾讯电话面试
+1.计算机网络：https的过程，http与https的差别
+2.html:base64,让div的宽高为border+padding+margin，重绘和重排，localstorage相关，webworker
+3.css：选择器的权重，选择器有哪些，position，每个选择器的作用
+4.js：let const,es6新特性,箭头函数和普通函数的差距，箭头函数的this，setTimeout 丢帧，事件循环
+5.vue:父组件和子组件的生命周期顺序
+邦盛科技二面
+1.项目相关：什么时候开始学习前端，遇到的难题，如何解决
+2.vue相关：是否学过react，为什么同时使用bootstrap和element-ui,对element-ui如何理解
+3.js相关：如何理解this
+3.反问环节：技术栈缺少什么：缺少对知识面广度上的了解，掌握的技术还不够新
+腾讯文档一面
+1.计算机基础：线程的调度、锁的机制、生产者-消费者、进程和线程的区别、浏览器显示页面时有哪些进程、锁如何实现
+2.js：事件循环（event loop）如何理解，如何使用js异步编程，了解了es6哪些内容
+3.计算机网络：tcp udp https http http的缺点 http2.0新特性 网络七层模型
+4.数据库：遵循什么范式，遵循哪些设计准则
+5.项目：完成了哪些功能 采用的技术栈
+6.为什么想要学习前端
+邦盛HR面
+1.自己的发展方向
+2.有参与过秋招，考虑过转正吗
+3.为什么想要从事前端
+4.性格如何
+5.反问环节：公司发展方向、上班制度、工作氛围（团建相关）
+木链笔试+面试
+1.promise setImmediate process
+2.css动画
+3.map set 区别
+4.如何学习前端知识
+5.css技术如何 选择器有哪些 权重如何
+6.反问环节
+字节跳动一面
+1.html:跨域，http缓存，如何让js不能访问cookie，怎样发送请求使得本地能够进行缓存，http永久重定向和临时重定向状态码
+2.js相关：4道题，js的基本数据类型
+3.vue相关：v-if v-show 2.0的响应式原理（Object.defineproptry） 
+4.数据库 如何优化 联合查询
+5题目：
+1.
+window.name = 'ByteDance'; 
+function A () {   
+    this.name = 123; 
+} 
+A.prototype.getA = function(){         
+    return this.name + 1; 
+} 
+let a = new A(); 
+let funcA = a.getA; 
+
+funcA();
+a.getA();
+2.
+['6', '1.1.1.1.1.1', '1.1.1', '2.3.40', '2.34.0']
+
+
+
+['6', '2.34.0', '2.3.40', ''1.1.1.1.1', '1.1.1']
+3.二叉树的蛇形遍历
+4.防抖函数
