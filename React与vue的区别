@@ -1,0 +1,41 @@
+# 数据劫持的不同
+##   vue
+    2.0 使用object.defineProperty 
+    3.0 使用proxy
+    本质上是劫持了对象的getter setter方法，并在数据改变时使用了依赖收集，来优化数据的渲染
+    所以vue对数据会进行精确地监听
+## react
+    直接对数据的引用进行diff比较，不优化会导致大量不必要的VDOM渲染
+    react更强调数据的不可变
+# 数据流的不同
+## vue
+    实现双向绑定
+## react
+    单向数据流
+## 相同点
+    复杂系统会使用redux和vuex来管理状态
+# Hoc mixins
+## vue 
+    使用mixins，对代码侵入性更强，同时更加灵活
+## react
+    使用Hoc（高阶组件），一个以组件为参数，组件为返回值的函数
+# 组件间的通信
+## vue
+    父组件使用props向子组件传递信息
+    子组件使用emit向父组件传递信息
+    子组件通过props.parent.children向兄弟组件传递信息
+    使用provide/inject使用跨层级传递信息
+## react
+    父组件使用props向子组件传递信息
+    子组件通过回调函数向父组件传递信息
+    使用context跨层级传递信息
+# 模板渲染方式不同
+## vue
+    拓展的HTML语法，需要通过指令来完成特定语法如（v-if v-show v-model）
+## react
+    JSX语法，通过原生JS实现的语法，特定语法都可以用JS来实现
+# 渲染过程不同
+## vue
+    vue会进行依赖收集，更新时会进行依赖比较，来优化渲染
+## react
+    状态改变时（引用改变），会使子组件全部重新渲染
