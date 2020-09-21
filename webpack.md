@@ -139,3 +139,48 @@ runtime,以及伴随的 mainfest 数据，是 webpack 用来连接模块化的�
 
 当编译器开始执行、解析、映射程序时，所有模块的详细要点会被存储在 mainfest 中。
 完成打包后发送至浏览器，会在运行时通过 mainfest 来解析和加载模块。
+
+# targets
+
+webpack提供了多种构建目标(target)，浏览器和服务器均可
+
+# hot module replacement 模块热替换
+
+1.保留在完成重新加载页面时丢失的应用程序状态
+2.只更新变更内容，以节省宝贵的开发时间
+3.调整样式更加快速，几乎相当于在浏览器调试器中更改样式
+```javascript
+    const webpack=require('webpack');
+    module.export={
+        enrty:{
+            app:'./src/index.js'
+        },
+        devServer:{
+            hot:true
+        },
+        plugins:[
+            new webpack.NameModulesPlugin(),
+            new webpack.HotModuleReplacementPlugin(),
+        ]          
+    } 
+//css的模块热替换
+    module.exports={
+        module:[
+            {
+                test:/\.css$/,
+                use:['style-loader','css-loader']
+            }   
+        ]
+    }   
+```
+# 模块的四种规范
+## CommonJS
+    1.模块的导入require()
+    2.模块的定义module.exports={}
+    3.浏览器不兼容，缺少环境变量如module,global
+    4.循环加载
+    
+## AMD
+## CMD
+## ES6
+
