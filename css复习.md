@@ -185,5 +185,8 @@
     https://www.zhihu.com/answer/1017020768
 # 图标字体库
     awesome
+# footer的实现
+    父元素 display:flex min-height:100vh
+    子元素 页脚前的元素 flex-grow:1
 
 
