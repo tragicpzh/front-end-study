@@ -19,9 +19,16 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="80f68868-5f0b-4871-b384-b7faa493b512" name="Default Changelist" comment="webpack 前端性能优化">
+    <list default="true" id="80f68868-5f0b-4871-b384-b7faa493b512" name="Default Changelist" comment="react vue 区别">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.md" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cookie.md" beforeDir="false" afterPath="$PROJECT_DIR$/Cookie.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Typescript.md" beforeDir="false" afterPath="$PROJECT_DIR$/Typescript.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css复习.md" beforeDir="false" afterPath="$PROJECT_DIR$/css复习.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js复习.md" beforeDir="false" afterPath="$PROJECT_DIR$/js复习.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shadowDom.md" beforeDir="false" afterPath="$PROJECT_DIR$/shadowDom.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue.md" beforeDir="false" afterPath="$PROJECT_DIR$/vue.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/计算机基础.md" beforeDir="false" afterPath="$PROJECT_DIR$/计算机基础.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +59,10 @@
       <recent name="D:\workspace\front-end-study\初始阶段学习" />
     </key>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="80f68868-5f0b-4871-b384-b7faa493b512" name="Default Changelist" comment="" />
@@ -126,5 +136,9 @@
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2472" y="253" key="Vcs.Push.Dialog.v2/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1600671244482" />
+    <state x="662" y="223" width="596" height="594" key="find.popup" timestamp="1602129670610">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="662" y="223" width="596" height="594" key="find.popup/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1602129670610" />
   </component>
 </project>

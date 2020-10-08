@@ -188,5 +188,17 @@
 # footer的实现
     父元素 display:flex min-height:100vh
     子元素 页脚前的元素 flex-grow:1
-
+# 响应式布局
+    1.bootstrap
+    2.媒体查询
+    @media screen and(条件){样式}
+    3.宽度高度的单位
+        1.百分比
+        2.vw 视口宽度 1vw=1%
+        3.vh 视口高度 1vh=1%
+        4.vm vw vh中较小的那个
+    4.字体大小的单位
+        1.rem 相对根节点元素大小
+        2.px 相对分辨率
+        3.em 默认1em=16px
 

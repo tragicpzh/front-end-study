@@ -1,5 +1,6 @@
 # Typescript
 ## 接口 interface
+   ```
    对象接口
    interface xx{
        color:string;        //必需属性
@@ -27,6 +28,7 @@
        interval:number;
        reset():void
    }
+   ```
 ## 类类型
     类有两个类型：静态和实例
     静态是这个类（函数）本身（constructor(),static）

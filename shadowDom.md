@@ -11,7 +11,7 @@ closed:外部不能获取 shadowRoot
 
 ## 3.写为 React 组件（函数式）
 
-不涉及 state props redux（静态）
+### 不涉及 state props redux（静态）
 
 ```javascript
 import React, { useEffect, useRef } from "react";

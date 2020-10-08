@@ -169,3 +169,9 @@
 ## vue 相关组件库
 
     https://www.cnblogs.com/zdz8207/p/vue-ui-framework.html
+
+## vue 传值
+1.路由参数传值  
+2.webStorage cookie传值  
+3.父子组件间传值（props,emit,回调函数）  
+4.vuex  

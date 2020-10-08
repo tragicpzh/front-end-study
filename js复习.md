@@ -67,3 +67,16 @@
     4.Dom对象事件
 ## 显示执行
     bind call apply
+# date相关操作
+```
+   new Date(year,month,day) month为0-11
+   date.getMonth()
+   date.getFullYear()
+   date.getDate() 返回几号
+   date.getDay()  返回星期几 0-6 0-星期天
+   date.getHours()
+   date.setDate()
+   其余对应
+   date.parse(string)将“月/日/年”转为date类型，可以传参前对 string进行正则替换
+```
+   

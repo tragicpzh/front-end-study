@@ -4,7 +4,7 @@
 - [x] AOP
 - [x] lodash
 - [x] SSR
-- [ ] 跨域
+- [x] 跨域
 - [x] Redux
 - [x] shadowDom
 - [ ] TS
@@ -21,3 +21,9 @@
 - [ ] 面试总结
 - [ ] 项目总结
 - [x] react vue 区别
+- [x] 事件委托
+- [ ] jquery基础知识
+- [x] BFC
+- [x] CSS初始化
+- [x] vue 传值
+- [x] 继承
