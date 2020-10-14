@@ -4,37 +4,37 @@
 
 ### CommonJS
 
-Node.js 是 commonJS 规范的主要实践者，它有四个重要的环境变量为模块化的实现提供支持：module exports require global
+Node.js 是 commonJS 规范的主要实践者，它有四个重要的环境变量为模块化的实现提供支持：module exports require global  
 同步加载模块，在服务端读取很快
 
 ### AMD(require.js)
 
-异步加载模块。依赖前置，提前执行（有可能加载没用到的模块，浪费资源）
-require.config()指定引用路径
-define()定义模块
+异步加载模块。依赖前置，提前执行（有可能加载没用到的模块，浪费资源）  
+require.config()指定引用路径  
+define()定义模块  
 require()加载模块
 
 ### CMD(sea.js)
 
-异步加载模块。依赖就近，延迟执行（使用时才加载，性能差）
-define()定义模块
+异步加载模块。依赖就近，延迟执行（使用时才加载，性能差）  
+define()定义模块  
 require()加载模块
 
 ### ES6
 
-exports 定义模块
+exports 定义模块  
 import 加载模块
 
 ## CommonJS vs ES6
 
-1.CommonJS 输出一个值的拷贝
-ES6 输出一个值的引用
-2.CommonJS 模块运行时加载：加载模块-生成对象-读取方法
+1.CommonJS 输出一个值的拷贝  
+ES6 输出一个值的引用  
+2.CommonJS 模块运行时加载：加载模块-生成对象-读取方法  
 ES6 模块编译时输出：加载输出值而不是模块-静态解析阶段就会生成
 
 ## 作用
 
-1.不需要命名空间，不需要全局变量，解决了命名冲突的问题
+1.不需要命名空间，不需要全局变量，解决了命名冲突的问题  
 2.require 引入依赖，让开发者只需关心当前模块的依赖 3.提高可维护性 4.异步加载模块，提高前端性能
 
 # 多线程与异步 I/O
@@ -92,22 +92,89 @@ ES6 模块编译时输出：加载输出值而不是模块-静态解析阶段就
 
 #### 尾触发与 next
 
-尾触发的关键字为 next,类似于中间件模式
+    尾触发的关键字为 next,类似于中间件模式
 
 #### async
 
-callback 的参数均为(err,data)
-1.series()实现任务串行
-2.parallel()实现任务并行
-3.waterfall()实现任务的依赖串行
-4.auto()实现自动依赖处理
+    callback 的参数均为(err,data)
+    1.series()实现任务串行
+    2.parallel()实现任务并行
+    3.waterfall()实现任务的依赖串行
+    4.auto()实现自动依赖处理
 
 #### step
 
-callback 的参数均为(err,data)
-Step(task1,task2...)串行处理任务
-callback 为 this:串行处理
-callback 为 this.parallel:并行处理
-var group=this.group(); callback 为 group：并行处理
+    callback 的参数均为(err,data)
+    Step(task1,task2...)串行处理任务
+    callback 为 this:串行处理
+    callback 为 this.parallel:并行处理
+    var group=this.group(); callback 为 group：并行处理
 
-#### wind
+## 异步并发控制
+
+### bagpipe
+
+    -特点
+    通过一个队列来控制并发量
+    如果当前活跃的异步调用小于限定值，从队列中取出执行
+    活跃调用达到限定值，调用暂时存放在队列中
+    每个异步调用结束，从队列中取出新的异步调用
+    -拒绝模式
+    当等待的调用队列也满了，会直接返回给异步调用一个拒绝异常
+    -超时控制
+    将调用时间超过阈值的踢出活跃队列
+
+### async
+
+    queue()：动态添加并行任务
+    parallelLimit():允许固定数量的并行任务
+
+# 内存控制
+
+## V8 的垃圾回收机制和内存限制
+
+### V8 限制堆内存的原因(64 位只有 1.4G)
+
+    当垃圾回收堆达到1.5G时，一次小的垃圾回收需要50ms以上,极大地影响了性能和用户体验
+
+### 垃圾回收算法
+
+    -内存分代
+    新生代:存活时间短
+    老生代:存活时间长
+    -Scavenge算法(Cheney算法)(新生代内存算法)
+      将内存分为FROM与TO，在分配对象时只使用FROM，垃圾回收时只复制FROM中的存活对象到TO，然后FROM TO互换
+      典型的牺牲空间换取时间。
+    -Mark-Sweep&Mark-Compact
+      Mark-Sweep：
+          分为标记和清除，标记存活对象
+          只清除死亡对象(没有被标记的对象)
+      Mark-Compact:
+          边标记边整理内存，使得死亡对象均在边界外
+      V8主要使用Sweep，当没有空间分配给晋升的新生代时使用Compact
+    -新生代到老生代的晋升
+      1.被scavenge再次回收的内存对象
+      2.回收时TO空间使用超过25%
+    -Incremental Marking(增量标记)
+      垃圾回收时需要暂停应用逻辑，老生代的回收会产生较大的全停顿。
+      V8将垃圾回收分为多个小step，回收与应用逻辑交替进行。
+
+## 高效使用内存
+
+### 作用域(scope)
+
+    1.标识符查找
+    2.作用域链
+    2.变量的主动释放
+    delete或者xx=undefined or null
+
+### 闭包
+
+    提供外部作用域访问内部作用域的方法
+    会造成中间函数不会被释放->内存不会被释放
+
+## 内存泄漏
+
+    1.缓存
+    2.队列消费不及时
+    3.作用域未释放

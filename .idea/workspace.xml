@@ -19,16 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="80f68868-5f0b-4871-b384-b7faa493b512" name="Default Changelist" comment="react vue 区别">
+    <list default="true" id="80f68868-5f0b-4871-b384-b7faa493b512" name="Default Changelist" comment="nodeJS 中间件模式">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cookie.md" beforeDir="false" afterPath="$PROJECT_DIR$/Cookie.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Typescript.md" beforeDir="false" afterPath="$PROJECT_DIR$/Typescript.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css复习.md" beforeDir="false" afterPath="$PROJECT_DIR$/css复习.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js复习.md" beforeDir="false" afterPath="$PROJECT_DIR$/js复习.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shadowDom.md" beforeDir="false" afterPath="$PROJECT_DIR$/shadowDom.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue.md" beforeDir="false" afterPath="$PROJECT_DIR$/vue.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/计算机基础.md" beforeDir="false" afterPath="$PROJECT_DIR$/计算机基础.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nodeJS.md" beforeDir="false" afterPath="$PROJECT_DIR$/nodeJS.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,10 +52,7 @@
       <recent name="D:\workspace\front-end-study\初始阶段学习" />
     </key>
   </component>
-  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
-  <component name="SvnConfiguration">
-    <configuration />
-  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="80f68868-5f0b-4871-b384-b7faa493b512" name="Default Changelist" comment="" />
@@ -77,6 +67,12 @@
       <workItem from="1600671206360" duration="84000" />
       <workItem from="1600671302376" duration="623000" />
       <workItem from="1600684123687" duration="1876000" />
+      <workItem from="1602292033557" duration="14000" />
+      <workItem from="1602481982755" duration="1220000" />
+      <workItem from="1602584759558" duration="93000" />
+      <workItem from="1602638729882" duration="75000" />
+      <workItem from="1602647133210" duration="1585000" />
+      <workItem from="1602658201612" duration="1667000" />
     </task>
     <task id="LOCAL-00001" summary="添加markdown文件">
       <created>1600226494943</created>
@@ -92,7 +88,28 @@
       <option name="project" value="LOCAL" />
       <updated>1600671240525</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="网络请求">
+      <created>1602226112151</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1602226112151</updated>
+    </task>
+    <task id="LOCAL-00004" summary="set map">
+      <created>1602227190408</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1602227190408</updated>
+    </task>
+    <task id="LOCAL-00005" summary="nodeJS 中间件模式">
+      <created>1602584835218</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1602584835218</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -113,7 +130,10 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="添加markdown文件" />
     <MESSAGE value="webpack 前端性能优化" />
-    <option name="LAST_COMMIT_MESSAGE" value="webpack 前端性能优化" />
+    <MESSAGE value="网络请求" />
+    <MESSAGE value="set map" />
+    <MESSAGE value="nodeJS 中间件模式" />
+    <option name="LAST_COMMIT_MESSAGE" value="nodeJS 中间件模式" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2660" y="275" key="FileChooserDialogImpl" timestamp="1600048731163">
@@ -132,13 +152,10 @@
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2381" y="164" key="SettingsEditor/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1600048679714" />
-    <state x="2472" y="253" key="Vcs.Push.Dialog.v2" timestamp="1600671244482">
-      <screen x="1920" y="0" width="1920" height="1040" />
-    </state>
-    <state x="2472" y="253" key="Vcs.Push.Dialog.v2/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1600671244482" />
-    <state x="662" y="223" width="596" height="594" key="find.popup" timestamp="1602129670610">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1602584840563">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="662" y="223" width="596" height="594" key="find.popup/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1602129670610" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/-1920.2.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1602584840563" />
+    <state x="2472" y="253" key="Vcs.Push.Dialog.v2/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1602227194620" />
   </component>
 </project>
