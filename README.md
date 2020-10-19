@@ -8,7 +8,7 @@
 - [x] 跨域
 - [x] Redux
 - [x] shadowDom
-- [ ] TS
+- [x] TS
 - [x] umi-library(father)
 - [x] XSS
 - [x] 前端埋点
@@ -31,3 +31,7 @@
 - [x] 网络请求
 - [x] 中间件模式
 - [ ] node.js
+- [ ] 前后端的实时通讯
+- [x] Plugin Loader
+- [x] react-beautiful-dnd(react拖拽组件)
+- [x] 正则表达式
