@@ -178,3 +178,46 @@ ES6 模块编译时输出：加载输出值而不是模块-静态解析阶段就
     1.缓存
     2.队列消费不及时
     3.作用域未释放
+
+## 大内存应用
+
+    Node提供了stream模块来处理大文件
+    stream继承自EventEmitter,具备自定义事件功能‘
+
+# Buffer
+
+## 结构
+
+### 模块结构
+
+    性能相关--C++
+    非性能相关--javascript
+    Buffer使用堆外内存
+
+### 对象
+
+    Buffer与Array类似，元素为16进制的2位数(0~255)
+
+### 内存分配
+
+    在C++层面上实现内存申请(避免大量的内存申请的系统调用)，javascript分配内存
+    内存分配的机制:slab(一种动态内存管理机制)
+        slab是一块申请好的固定内存区域
+        有3种状态:
+            full:完全分配状态
+            partial:部分分配状态
+            empty:没有被分配状态
+        node以8kb为分界来区分大对象和小对象
+        分配小对象:
+            使用一个局部变量pool为中间处理对象(slab)
+            empty:
+                pool.used=0
+            添加一个新的Buffer小对象到slab中:
+            partial:
+                this.parent=pool
+                this.offset=pool.used
+                pool.used+=this.length
+            如果添加的Buffer对象放不下，则申请一个新的pool(slab)
+            会有小对象占用8kb的slab内存，一直不释放内存的情况发生
+        分配大对象:
+            直接分配一个SlowBuffer作为slab单元(C++中定义)

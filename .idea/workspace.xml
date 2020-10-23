@@ -19,9 +19,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="80f68868-5f0b-4871-b384-b7faa493b512" name="Default Changelist" comment="nodeJS 中间件模式">
+    <list default="true" id="80f68868-5f0b-4871-b384-b7faa493b512" name="Default Changelist" comment="nodeJS">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nodeJS.md" beforeDir="false" afterPath="$PROJECT_DIR$/nodeJS.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +71,8 @@
       <workItem from="1602584759558" duration="93000" />
       <workItem from="1602638729882" duration="75000" />
       <workItem from="1602647133210" duration="1585000" />
-      <workItem from="1602658201612" duration="1667000" />
+      <workItem from="1602658201612" duration="1706000" />
+      <workItem from="1603103258212" duration="185000" />
     </task>
     <task id="LOCAL-00001" summary="添加markdown文件">
       <created>1600226494943</created>
@@ -109,7 +109,21 @@
       <option name="project" value="LOCAL" />
       <updated>1602584835218</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="nodeJS">
+      <created>1602671287800</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1602671287800</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Plugin Loader react拖拽组件 正则表达式">
+      <created>1603103413105</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1603103413105</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -133,7 +147,9 @@
     <MESSAGE value="网络请求" />
     <MESSAGE value="set map" />
     <MESSAGE value="nodeJS 中间件模式" />
-    <option name="LAST_COMMIT_MESSAGE" value="nodeJS 中间件模式" />
+    <MESSAGE value="nodeJS" />
+    <MESSAGE value="Plugin Loader react拖拽组件 正则表达式" />
+    <option name="LAST_COMMIT_MESSAGE" value="Plugin Loader react拖拽组件 正则表达式" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2660" y="275" key="FileChooserDialogImpl" timestamp="1600048731163">
@@ -152,10 +168,10 @@
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2381" y="164" key="SettingsEditor/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1600048679714" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1602584840563">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1603103428290">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/-1920.2.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1602584840563" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/-1920.2.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1603103428290" />
     <state x="2472" y="253" key="Vcs.Push.Dialog.v2/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1602227194620" />
   </component>
 </project>
