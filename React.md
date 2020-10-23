@@ -243,3 +243,17 @@ UI 组件库：antd
 
     setState:更新state与组件，会与其他setState合并为一次更新
     forceUpdate:强制让组件重新渲染，会跳过shouldComponentUpdate()
+
+# react Ref
+
+    1.回调函数，入参为组件实例或dom节点
+        <xxx ref={(node)=>{}}>
+    2.createRef,forwardRef(转发ref)
+        ref=react.createRef();
+        <Son ref={ref}>
+        const Son=forwardRef((props,ref)=>{
+            return <Grandson xxx={ref}>
+        })
+    3.函数式组件:useRef.forwardRef
+    4.useuseImperativeHandle(ref,handle,[deps])
+        用于暴露特定的值和方法给ref
