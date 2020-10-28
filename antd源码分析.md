@@ -137,3 +137,113 @@ rc-checkbox:
     xhr+FormData+promise
     上传触发：<input type="file">
 ```
+
+# Slider
+
+## 底层组件 rc-slider
+
+### 结构
+
+```javascript
+  createSlider(Slider)
+  包装后的结构:
+    <div>
+      <div/>    //完整的滑动条
+      {tracks}  //拖动部分的滑动条
+      <Steps/>  //滑动条的静态节点
+      {handles} //拖动的节点
+      <Marks>   //静态节点的说明文本
+      {children}//<Slider>{children}</Slider>
+    </div>
+```
+
+### Slider 作用
+
+    1.定义各类事件(键盘事件,触摸屏事件,滑动条变化各个阶段的回调函数，进入滑动条，离开滑动条)
+    2.tracks和handles的render函数
+    3.获得当前滑动条的value
+    4.处理获得的value
+
+### createSlider
+
+    1.创建整个滑动条组件
+    2.定义各类事件的触发条件(重新封装各类事件)
+    3.定义滑动条的偏移值相关计算(postion->value offset->value value->offset)
+    4.获得滑动相关位置信息(起始位置，滑动长度)
+    5.定义handle的生成函数
+
+### 两者的关系
+
+不是高阶组件，是相互混合的关系
+Slider 需要用到 createSlider 中的函数
+createSlider 需要用到 Slider 中的函数
+
+### Range
+
+    双滑块版的Slider
+
+### Handle
+
+    handle的渲染组件
+
+### Track
+
+    track的渲染组件
+
+### 用 createSlider(Slider)可能的原因
+
+    用一个组件实现，组件过于臃肿，所以将功能分给两个组件
+    组件一：维护value，定义事件和回调函数，渲染组件的一部分
+    组件二：触发事件和回调函数，计算value相关，渲染整个组件
+
+# Rate
+
+## 核心
+
+    rc-rate
+
+## 核心结构
+
+    <li>
+      <div>
+        <div className=`${prefixCls}-first`></div>
+        <div className=`${prefixCls}-second`></div>
+      </div>
+    </li>
+    关键位prefixCls-first{
+      position:absolute,
+      width:50%,
+      left:0,
+      top:0,
+      overflow:hidden,
+      ...other
+    }
+
+# Anchor
+
+## 结构
+
+    <div> wrapper
+      <div> anchor
+        <div> ink-左侧链接轴
+        </div>
+        {childre} AnchorLink
+      </div>
+    </div>
+
+## AnchorLink
+
+    <div>
+      <a href>{title}</a>
+    </div>
+
+## 两者如何建立联系
+
+    1.使用 context 传递相关函数和信息
+    注册/删除链接函数 活动链接 跳转函数 点击回调函数
+    2.AnchorLink 创建时注册链接 销毁时删除链接 3.`<a>`onClick 触发跳转函数和点击回调函数
+
+## 跳转函数如何实现
+
+    1.window.scrollTo
+    2.element.srollTop=xxx;

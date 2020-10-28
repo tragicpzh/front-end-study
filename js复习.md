@@ -135,24 +135,60 @@
 ## Map
 
 ```javascript
-    //创建
-    var m = new Map();
-    //添加
-    m.set(key, value);
-    //取值
-    value = m.get(key);
-    //大小
-    m.size;
-    //判断
-    m.has(key);
-    //删除
-    m.delete(key);
-    //清空
-    m.clear();
-    //遍历
-    for (let [key, value] of map) {
-      console.log(key, value);
+//创建
+var m = new Map();
+//添加
+m.set(key, value);
+//取值
+value = m.get(key);
+//大小
+m.size;
+//判断
+m.has(key);
+//删除
+m.delete(key);
+//清空
+m.clear();
+//遍历
+for (let [key, value] of map) {
+  console.log(key, value);
+}
+//转数组
+[...map];
+```
+
+# 窗口和视口的相关函数与属性
+
+## 属性
+
+```javascript
+    event:{
+        screenX/Y:距离电脑屏幕的距离
+        clientX/Y:距离页面边界距离(受滚动影响)
+        pageX/Y:距离页面边界距离(不受滚动影响)
+        offsetX/Y:距离当前元素的边界距离(行内元素无效),除safari不包含边框
     }
-    //转数组
-    [...map];
+    element:{
+        clientHeight/Width:content+padding-滚动条
+        clientLeft:元素左边框宽度(border-left),如果有左侧滚动条则包含滚动条宽度
+        clientTop:元素顶部边框宽度(border-top)
+        offsetWidth/Height:content+padding+border(包含滚动条)
+        offsetParent:最近的定位父元素|table|tabel cell|根元素(html body)
+        offsetTop/Left:与offsetParent内边距边界的距离
+        getClientRects:获取元素占据的所有矩形区域(每个inline元素),返回textRectangle集合
+        getBoundingClientRect:获取元素的盒子模型,返回textRectangle对象
+        scrollTop/Left:元素滚动的距离(可用此属性来实现滚动变化)
+        scrollHeight/Width:max(内容区域,元素宽度),包含被滚动隐藏的内容
+    }
+    window:{
+        innerWidth/Height:视口宽度/高度，不包括侧边栏
+        outerWidth/Height:视口宽度/高度，包括侧边栏/浏览器顶部栏
+        scrollX/Y(pageX/YOffset):页面滚动的距离
+        screenX/Y(screenLeft/Top):浏览器左边框到屏幕边缘
+        scroll(x,y,option)/scrollTo(x,y)|(option):滚动到(x,y),option:{top,left,behavior(smooth,instant)}
+    }
+    计算一个元素的位置:{
+        x:element.getBoundingClientRect.left+document.documentElement.scrollLeft
+        y:element.getBoundingClientRect.top+document.documentElement.scrollTop
+    }
 ```
