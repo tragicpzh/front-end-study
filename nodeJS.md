@@ -221,3 +221,11 @@ ES6 模块编译时输出：加载输出值而不是模块-静态解析阶段就
             会有小对象占用8kb的slab内存，一直不释放内存的情况发生
         分配大对象:
             直接分配一个SlowBuffer作为slab单元(C++中定义)
+
+## Buffer 的转换
+
+    字符串转Buffer
+        new Buffer(str,encoding)
+        buf.write(str,offset,length,encoding)
+    Buffer转字符串
+        buf.toString(encodeing,start,end)

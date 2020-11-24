@@ -1,5 +1,7 @@
 # 导航
-## nav配合<div>使用
+
+## nav 配合<div>使用
+
     .nav 生成导航栏
     .nav-pills 胶囊状导航 <ul>
     .nav-tabs 标签式导航 <ul>
@@ -28,11 +30,15 @@
         <li><a href="#">PHP</a></li>
     </ul>
     对<li>使用dropdowm来实现
-## breadcrumb 
+
+## breadcrumb
+
     面包式导航
     首页/简介/个人信息
     一般使用<ol>
-## navbar配合<nav>使用（折叠式导航）
+
+## navbar 配合<nav>使用（折叠式导航）
+
     .navbar 生成导航栏
     .navbar-expend-xx xx为sm、lg等等 表示响应式导航
     .bg-xx 背景颜色
@@ -64,6 +70,3 @@
     data-target 触发的内容
     collapse 折叠
     flex-column 垂直导航 用于<ul>
-
-
-

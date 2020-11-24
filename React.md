@@ -257,3 +257,117 @@ UI 组件库：antd
     3.函数式组件:useRef.forwardRef
     4.useuseImperativeHandle(ref,handle,[deps])
         用于暴露特定的值和方法给ref
+
+# react 深度剖析
+
+## state
+
+    state的更新：
+        合并多次多个处于batchUpdate的state,然后一次性更新
+    useState:
+        为每个组件创建一个_state和index，使用一个state数组来存储一个函数式组件创建的所有state，并将_state和index放在虚拟节点对象上(Fiber,避免命名冲突)
+    state与useState的差别:
+        1.类组件中使用this.state来读取state，能够保证读到的是最新的state引用（解决方法:创造闭包环境）
+        2.函数式组件使用useState产生的state，会受闭包环境影响，导致不能拿到最新的state引用（解决方法:useRef）
+        3.useState默认使用浅比较：只比较第一层的数据(基本数据类型比较值，复杂类型比较引用,解决方法:useReducer实现深比较)
+        4.setState可以保存函数(记录函数的引用)，useState不能保存函数(传入的函数会被立刻执行(类似于setState(function),用于获得最新的state),解决方法:使用useCallback作为替代)
+    batchUpdate:
+        能命中batchUpdate的函数:{
+            生命周期函数
+            react注册的事件
+            可以管理的入口(render)
+        }
+        不能命中的函数{
+            setTimeout setInterval等宏任务
+            自定义dom事件
+            管不到的入口
+        }
+        在命中batchupdate的函数中:
+            setState会被合并(异步)，useState同理
+        不能命中的函数中:
+            setState会被立即执行(同步)
+    Hook对象:{
+        baseState
+        next(记录下一次useState对应的hook对象，类似于链表的下一个节点)
+        baseUpdate
+        queue
+        memoizedState(记录useState返回的结果)
+    }
+
+## Fiber
+
+    解决react同步更新导致的性能问题(函数调用栈过深->同步任务执行过久->不能执行其他任务->界面卡顿)
+
+### 算法
+
+    分片，将一个耗时的算法分为小片，每个小片运行时间很短，使得在其中可以插入其他任务。(更新过程碎片化)
+
+### 影响
+
+    componentWillMount和componentWillUpdate这两个函数有可能会被调用多次。
+    因为生命周期函数有可能会被优先级更高的任务打断，而造成多次执行。
+
+### FiberNode
+
+    fiber:单链表的属性结构
+    FiberRoot:链表根节点
+    current:FiberNode,fiber节点的根
+    fiber:{
+        stateNode:节点实例
+        child:下一个fiber节点
+        sibling:兄弟fiber节点
+        return：父节点
+    }
+
+## Hook
+
+    在不编写class的情况下使用state以及其他的react特性
+
+### 现有的 hook
+
+    useState
+        1.等价于类组件的state
+        2.setState可以传入函数，参数为最新的3.3。state,返回值为更新的state
+        4.setState不会合并更新对象
+        5.initialState只在`组件初始渲染`中起作用，可以是函数
+    useEffect:
+        1.副作用操作->实现生命周期函数(多个effect实现关注点分离)
+        2.在组件渲染到屏幕之后执行
+        3.如果不添加依赖项，那么effect中的数据始终引用先前渲染中的旧数据
+    useContent:
+        1.接收一个context对象并返回context的当前值，当context变化时触发重渲染
+        2.context为react的上下文，创建上下文:createContext(initialContext)
+    useReducer:
+        1.useState的替代方案，返回[state,dispatch],参数为(reducer,initState,init)
+        2.reducer:(state,action)=>newState
+        3.适用场景：更新复杂的状态/依赖于上一次state/触发深更新做性能优化
+    useCallback:
+        1.返回一个memoized回调函数
+        2.参数为(callback,deps)
+        3.等价于useMemo(()=>callback,deps)
+    useMemo:
+        1.返回一个memoized值
+        2.参数为(func,deps),func的返回值为memoized值
+        3.作用：优化性能
+    useRef:
+        1.useRef(initialValue)返回一个可变的ref对象
+        2.ref.current初始值为initialValue
+        3.ref可以保存任何值，它在每次渲染时都会返回同一个对象(引用地址不会变化)
+        4.当ref对象内容发生变化时，useRef不会通知你
+        5.ref的更改不会引发重新渲染，不会被重新声明
+    useImperativeHandle:
+        1.参数为(ref,createHandle,[deps])
+        2.用于自定义暴露给父组件的实例值，实例值为createHandle返回值
+    useLayoutEffect:
+        1.与useEffect相同
+        2.在所有dom变更之后,渲染到屏幕之前同步调用effect
+
+### Hook 使用规则
+
+    在react函数的最顶层调用他们
+    原因：hook节点是一个链表->每次渲染时，需要保证hook调用的顺序一致->不一致，会导致下一个hook节点与需要的节点不同，从而产生bug
+
+### 自定义 hook
+
+    1.以use开头的函数，函数内部可以调用hook。
+    2.自定义hook是一种重用状态逻辑的机制，其中的所有state和副作用都是完全隔离的。

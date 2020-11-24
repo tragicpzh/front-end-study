@@ -15,12 +15,12 @@
 - [ ] React
 - [ ] bootstrap
 - [ ] css
-- [ ] html
+- [ ] html/html5
 - [ ] js
 - [ ] vue
 - [ ] 计算机基础
 - [ ] 面试总结
-- [ ] 项目总结
+- [x] 项目总结
 - [x] react vue 区别
 - [x] 事件委托
 - [ ] jquery 基础知识
@@ -31,8 +31,11 @@
 - [x] 网络请求
 - [x] 中间件模式
 - [ ] node.js
-- [ ] 前后端的实时通讯
+- [ ] 前后端的实时通讯(socket.io)
 - [x] Plugin Loader
 - [x] react-beautiful-dnd(react 拖拽组件)
 - [x] 正则表达式
 - [ ] antd 源码分析
+- [x] 脚手架学习
+- [x] 前端工程化知识体系
+- [x] 未来的学习方向
