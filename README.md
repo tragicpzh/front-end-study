@@ -35,7 +35,9 @@
 - [x] Plugin Loader
 - [x] react-beautiful-dnd(react 拖拽组件)
 - [x] 正则表达式
-- [ ] antd 源码分析
+- [x] antd 源码分析
 - [x] 脚手架学习
 - [x] 前端工程化知识体系
 - [x] 未来的学习方向
+- [x] UUID
+- [x] rxjs
